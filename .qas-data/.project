@@ -1,0 +1,25 @@
+{
+    "additionalFields": {
+        "android": {
+            "appactivity": "com.qmetry.bank.bankingapplication.HomePageActivity",
+            "apppackage": "com.qmetry.bank.bankingapplication"
+        },
+        "mobileweb": {
+            "baseurl": "https://www.gmail.com"
+        },
+        "web": {
+            "baseurl": "https://www.gmail.com"
+        }
+    },
+    "framework": "junit",
+    "language": "java",
+    "projectSettings": {
+        "projectName": "JAVA_Junit",
+        "projectPath": "c:\\Users\\rinkesh.jain\\Desktop\\Sample"
+    },
+    "projectTypes": [
+        "web",
+        "mobileweb",
+        "android"
+    ]
+}
