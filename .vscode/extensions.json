@@ -1,0 +1,8 @@
+{
+	"recommendations": [
+		"eamodio.gitlens",
+		"vscjava.vscode-java-test",
+		"shengchen.vscode-checkstyle",
+		"vscjava.vscode-java-debug"
+	]
+}
