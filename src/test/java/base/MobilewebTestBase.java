@@ -14,7 +14,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class MobilewebTestBase {
 	protected static WebDriver driver;
-	protected static String baseUrl = "https://www.gmail.com";
+	protected static String baseUrl = "https://qas.qmetry.com/bank/";
 	protected static boolean acceptNextAlert = true;
 	protected static StringBuffer verificationErrors = new StringBuffer();
 
