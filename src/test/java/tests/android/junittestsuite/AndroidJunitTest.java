@@ -7,7 +7,6 @@ import org.hamcrest.CoreMatchers;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
-import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,7 +20,8 @@ import static base.ConfigurationManager.changeDefaultLocalTo;
 import static base.ConfigurationManager.getBundle;
 import base.AndroidTestBase;
 
- 
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class AndroidJunitTest extends AndroidTestBase{
