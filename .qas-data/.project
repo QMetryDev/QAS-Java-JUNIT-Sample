@@ -5,21 +5,23 @@
             "apppackage": "com.qmetry.bank.bankingapplication"
         },
         "mobileweb": {
-            "baseurl": "https://www.gmail.com"
+            "baseurl": "http://qas.qmetry.com/bank/"
         },
         "web": {
-            "baseurl": "https://www.gmail.com"
+            "baseurl": "http://qas.qmetry.com/bank/"
         }
     },
     "framework": "junit",
     "language": "java",
     "projectSettings": {
-        "projectName": "JAVA_Junit",
-        "projectPath": "c:\\Users\\rinkesh.jain\\Desktop\\Sample"
+        "projectName": "QAS-Java-JUNIT-Sample",
+        "projectPath": "d:/NewQAS/Samples/SampleProjectFixes"
     },
     "projectTypes": [
         "web",
         "mobileweb",
         "android"
-    ]
+    ],
+    "key": "VoGMdS6ysgGrTY2R7Dk/AH6ZeZRgb7Nt14rmdRizlcHjH3QbWFEBA07/GRF3ywdOcf9IcNagfGJUurj3BAfP9kGSHrCN8O+Fo/cr6YI5ZO8=",
+    "shareable": "sharedFunction"
 }
