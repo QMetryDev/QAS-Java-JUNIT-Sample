@@ -8,7 +8,13 @@
             "status": "NotRun",
             "elementKey": "",
             "elementDesc": "",
-            "indexColumn": ""
+            "indexColumn": "",
+            "tcId": 7,
+            "tsId": 6,
+            "testData": false,
+            "duration": 7180000000,
+            "errMessage": "",
+            "isRowExpanded": false
         },
         {
             "command": "Clear",
@@ -47,7 +53,13 @@
             "status": "NotRun",
             "elementKey": "text.txtusername",
             "elementDesc": "Input for txtUsername",
-            "indexColumn": ""
+            "indexColumn": "",
+            "tcId": 7,
+            "tsId": 6,
+            "testData": false,
+            "duration": 571000000,
+            "errMessage": "",
+            "isRowExpanded": false
         },
         {
             "command": "Type",
@@ -86,7 +98,13 @@
             "status": "NotRun",
             "elementKey": "text.txtusername",
             "elementDesc": "Input for txtUsername",
-            "indexColumn": ""
+            "indexColumn": "",
+            "tcId": 7,
+            "tsId": 6,
+            "testData": false,
+            "duration": 577000000,
+            "errMessage": "",
+            "isRowExpanded": false
         },
         {
             "command": "Clear",
@@ -121,7 +139,13 @@
             "status": "NotRun",
             "elementKey": "password.txtpassword",
             "elementDesc": "txtPassword password",
-            "indexColumn": ""
+            "indexColumn": "",
+            "tcId": 7,
+            "tsId": 6,
+            "testData": false,
+            "duration": 601000000,
+            "errMessage": "",
+            "isRowExpanded": false
         },
         {
             "command": "Type",
@@ -156,7 +180,13 @@
             "status": "NotRun",
             "elementKey": "password.txtpassword",
             "elementDesc": "txtPassword password",
-            "indexColumn": ""
+            "indexColumn": "",
+            "tcId": 7,
+            "tsId": 6,
+            "testData": false,
+            "duration": 614000000,
+            "errMessage": "",
+            "isRowExpanded": false
         },
         {
             "command": "Click",
@@ -187,7 +217,13 @@
             "status": "NotRun",
             "elementKey": "button.btnlogin",
             "elementDesc": "BUTTON btnLogin",
-            "indexColumn": ""
+            "indexColumn": "",
+            "tcId": 7,
+            "tsId": 6,
+            "testData": false,
+            "duration": 759000000,
+            "errMessage": "",
+            "isRowExpanded": false
         },
         {
             "command": "Clear",
@@ -222,7 +258,13 @@
             "status": "NotRun",
             "elementKey": "number.enteramountforcredit",
             "elementDesc": "Enter amount for credit number",
-            "indexColumn": ""
+            "indexColumn": "",
+            "tcId": 7,
+            "tsId": 6,
+            "testData": false,
+            "duration": 640000000,
+            "errMessage": "",
+            "isRowExpanded": false
         },
         {
             "command": "Type",
@@ -257,7 +299,13 @@
             "status": "NotRun",
             "elementKey": "number.enteramountforcredit",
             "elementDesc": "Enter amount for credit number",
-            "indexColumn": ""
+            "indexColumn": "",
+            "tcId": 7,
+            "tsId": 6,
+            "testData": false,
+            "duration": 616000000,
+            "errMessage": "",
+            "isRowExpanded": false
         },
         {
             "command": "Click",
@@ -284,7 +332,13 @@
             "status": "NotRun",
             "elementKey": "button.button11",
             "elementDesc": "BUTTON BUTTON11",
-            "indexColumn": ""
+            "indexColumn": "",
+            "tcId": 7,
+            "tsId": 6,
+            "testData": false,
+            "duration": 641000000,
+            "errMessage": "",
+            "isRowExpanded": false
         },
         {
             "command": "Verify Present",
@@ -323,7 +377,13 @@
             "status": "NotRun",
             "elementKey": "strong.usergloberank",
             "elementDesc": "STRONG user-globe-rank",
-            "indexColumn": ""
+            "indexColumn": "",
+            "tcId": 7,
+            "tsId": 6,
+            "testData": false,
+            "duration": 590000000,
+            "errMessage": "",
+            "isRowExpanded": false
         }
     ],
     "type": "web",
@@ -344,6 +404,8 @@
         }
     },
     "testDataExample": [],
-    "isTCValid": true,
+    "recordSessionType": "multiple",
+    "tags": [],
+    "shared": false,
     "executionStatus": "NotRun"
 }
