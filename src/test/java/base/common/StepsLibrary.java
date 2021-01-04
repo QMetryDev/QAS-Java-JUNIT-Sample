@@ -22,4 +22,16 @@ public class StepsLibrary {
 			 //Custom steps
 			//  driver.get("http://www.google.com"); 
 	}
+	
+	public static void implicitWait(long time) {
+		try {
+			Thread.sleep(time);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+	
+	public static void maximizeWindow(WebDriver driver) {
+		driver.manage().window().maximize();
+	}
 }
