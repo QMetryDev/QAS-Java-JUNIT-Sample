@@ -22,9 +22,9 @@
     <version>1.0</version>
     <name>QAS Junit Template</name>
     <properties>
-        <maven.compiler.target>1.7</maven.compiler.target>
-        <maven.compiler.source>1.7</maven.compiler.source>
-		<qaf.version>2.1.14</qaf.version>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+		<qaf.version>3.0.0</qaf.version>
     </properties>
     <repositories>
         <repository>
