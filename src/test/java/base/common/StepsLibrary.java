@@ -17,6 +17,14 @@ import org.openqa.selenium.edge.*;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.Alert;
+import java.util.NoSuchElementException;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import com.qmetry.qaf.automation.util.Validator;
+import static base.ConfigurationManager.getBundle;
 
 public class StepsLibrary {
 	private static String getJsDndHelper() {
@@ -97,4 +105,79 @@ public class StepsLibrary {
 		((JavascriptExecutor) driver).executeScript(executScriptValue,source);
 	}
 
+	public static void executeJavaScript(WebDriver driver, String executScriptValue) {
+		((JavascriptExecutor) driver).executeScript(executScriptValue);
+	}
+
+	public static void executeAsyncJavaScript(WebDriver driver, String executScriptValue) {
+		((JavascriptExecutor) driver).executeAsyncScript(executScriptValue);
+	}
+
+	public static void acceptAlert(WebDriver driver) {
+		if (checkAlert(driver,0)) {
+			driver.switchTo().alert().accept();
+		}
+	}
+
+	public static void dismissAlert(WebDriver driver) {
+		if (checkAlert(driver,0)) {
+			driver.switchTo().alert().dismiss();
+		}
+	}
+
+	public static String getAlertText(WebDriver driver) {
+		if (checkAlert(driver,0)) {
+		Alert alert= driver.switchTo().alert();
+		return alert.getText();
+		}else{
+			return "";
+		}
+	}
+
+	public static void setAlertText(WebDriver driver,String input) {
+		if (checkAlert(driver,0)) {
+			driver.switchTo().alert().sendKeys(input);
+		}
+	}
+	public static void verifyAlertPresent(WebDriver driver,String timeout) {
+		if (!checkAlert(driver,Long.valueOf(timeout))){
+			Validator.verifyFalse(true, "Alert is not present.", "Alert is present.");
+		}
+	}
+	public static void verifyAlertNotPresent(WebDriver driver,String timeout) {
+		if (checkAlert(driver,Long.valueOf(timeout))){
+			Validator.verifyFalse(true, "Alert is present.", "Alert is not present.");
+		}
+	}
+
+	public static void waitForAlert(WebDriver driver,String timeout) {
+		try{
+		WebDriverWait wait = new WebDriverWait(driver, Long.valueOf(timeout));
+		wait.until(ExpectedConditions.alertIsPresent());
+		}catch(Exception e){
+			System.out.println("Exception Occured during waitforAlert : "+e);
+		}
+	}
+
+	public static void storeIntoVariable(String varKey,String varValue) {
+		getBundle().addProperty(varKey, varValue);
+	}
+
+	public static boolean checkAlert(WebDriver driver,long timeout) {
+		boolean returnvalue = false;
+		WebDriverWait wait = new WebDriverWait(driver, timeout);
+		try {
+			wait.until(ExpectedConditions.alertIsPresent());
+			returnvalue = true;
+		} catch (NoSuchElementException e) {
+			returnvalue = false;
+		} catch (TimeoutException te) {
+			returnvalue = false;
+		} catch(NoAlertPresentException ex){
+			returnvalue = false;
+		}catch (Exception ex) {
+			returnvalue = false;
+		}
+		return returnvalue;
+	}
 }
