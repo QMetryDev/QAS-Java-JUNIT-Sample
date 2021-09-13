@@ -25,6 +25,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import com.qmetry.qaf.automation.util.Validator;
 import static base.ConfigurationManager.getBundle;
+import java.util.Base64;
+import org.openqa.selenium.By;
+import com.qmetry.qaf.automation.ui.WebDriverTestBase;
 
 public class StepsLibrary {
 	private static String getJsDndHelper() {
@@ -125,12 +128,13 @@ public class StepsLibrary {
 		}
 	}
 
-	public static String getAlertText(WebDriver driver) {
+	public static void getAlertText(WebDriver driver,String input) {
 		if (checkAlert(driver,0)) {
-		Alert alert= driver.switchTo().alert();
-		return alert.getText();
+			Alert alert= new WebDriverTestBase().getDriver().switchTo().alert();
+			getBundle().addProperty(input, alert.getText());
+			// CommonStep.store(alert.getText(), input);
 		}else{
-			return "";
+			Validator.verifyFalse(true, "Alert is present.", "Alert is not present.");
 		}
 	}
 
@@ -179,5 +183,10 @@ public class StepsLibrary {
 			returnvalue = false;
 		}
 		return returnvalue;
+	}
+
+	public static void sendEncryptedKeys(WebDriver driver,String text, By by) {
+		byte[] decoded = Base64.getDecoder().decode(text);
+		driver.findElement(by).sendKeys(new String(decoded));
 	}
 }
