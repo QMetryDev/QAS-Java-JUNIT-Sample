@@ -130,7 +130,7 @@ public class StepsLibrary {
 
 	public static void getAlertText(WebDriver driver,String input) {
 		if (checkAlert(driver,0)) {
-			Alert alert= new WebDriverTestBase().getDriver().switchTo().alert();
+			Alert alert= driver.switchTo().alert();
 			getBundle().addProperty(input, alert.getText());
 			// CommonStep.store(alert.getText(), input);
 		}else{
